@@ -22,5 +22,8 @@ describe TweetsController do
       expect(resoponse).to render_template :edit
     end
   end
+
+  describe 'GET #index' do
+    end
   end
 end

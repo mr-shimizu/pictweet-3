@@ -15,6 +15,12 @@ describe TweetsController do
       get :edit, id: tweet
       expect(assigns(:tweet)).to eq tweet
     end
+
+    it "renders the :edit template" do
+      tweet = create(:tweet)
+      get :edit id :tweet
+      expect(resoponse).to render_template :edit
+    end
   end
   end
 end
